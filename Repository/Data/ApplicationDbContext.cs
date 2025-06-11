@@ -18,7 +18,7 @@ namespace Repository.Data
         }
         
         public DbSet<UsuarioModel> Usuario { get; set; }
-        public DbSet<TareasModel> Libros { get; set; }
+        public DbSet<TareasModel> Tareas { get; set; }
        
 
     }
