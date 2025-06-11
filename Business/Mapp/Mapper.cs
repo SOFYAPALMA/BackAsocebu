@@ -46,6 +46,17 @@ namespace Business.Mapp
 
             return result;
         }
+        public static UsuarioModel GetMapper(UsuarioCrearDto crear)
+        {
+            var result = new UsuarioModel()
+            {
+                Nombre = crear.Nombre,
+                Correo = crear.Correo,
+                Clave = crear.Clave
+            };
+
+            return result;
+        }
 
 
         public static List<TareasDto> GetMapper(List<TareasModel> ListaTareas)
