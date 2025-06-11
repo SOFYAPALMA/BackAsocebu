@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
 using Repository.IRepository;
+using System.Threading;
 
 namespace Repository.Repository
 {
@@ -73,6 +74,7 @@ namespace Repository.Repository
         {
             try
             {
+                model.Estado = false;
                 await _context.Tareas.AddAsync(model);
                 await _context.SaveChangesAsync();
 

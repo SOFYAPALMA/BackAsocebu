@@ -96,10 +96,19 @@ namespace Business.Mapp
         {
             var result = new TareasModel()
             {
-                Actividad = crear.Actividad,
-                Estado = crear.Estado,
-                FechaApertura = crear.FechaApertura,
+                Actividad = crear.Actividad,       
                 FechaCierre = crear.FechaCierre
+            };
+            return result;
+        }
+        public static TareasModel GetMapper(TareasActualizarDto tareas)
+        {
+            var result = new TareasModel()
+            {
+                IdTarea = tareas.IdTarea,
+                Actividad = tareas.Actividad,
+                Estado = tareas.Estado,                
+                FechaCierre = tareas.FechaCierre
             };
             return result;
         }

@@ -18,7 +18,6 @@ namespace To_Do_API.Controllers
 
         [HttpPost]
         [Route("CrearTarea")]
-
         public async Task<Result> CrearTarea([FromBody] TareasCrearDto tareasCrear)
         {
             try
@@ -83,7 +82,7 @@ namespace To_Do_API.Controllers
 
         [HttpPut]
         [Route("ActualizarTarea")]
-        public async Task<IActionResult> ActualizarTarea([FromBody] TareasDto objModel)
+        public async Task<IActionResult> ActualizarTarea([FromBody] TareasActualizarDto objModel)
         {
             Result oRespuesta = new();
 

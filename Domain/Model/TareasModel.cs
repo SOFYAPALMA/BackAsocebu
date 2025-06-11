@@ -1,12 +1,15 @@
-﻿namespace Domain.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Domain.Model
 {
     public class TareasModel
     {
-       public int IdTarea { get; set; }
-       public string Actividad { get; set; }
-       public bool Estado { get; set; }
-       public DateTime FechaApertura { get; set; }
-       public DateTime FechaCierre{ get; set; }
+        [Key]
+        public int IdTarea { get; set; }
+        public string Actividad { get; set; }
+        public bool Estado { get; set; } = false; //actividad incompleta
+        public DateTime FechaApertura { get; set; } = DateTime.Now;
+        public DateTime? FechaCierre { get; set; } // Nullable
 
     }
 }

@@ -20,7 +20,6 @@ namespace To_Do_API.Controllers
 
         [HttpPost]
         [Route("CrearUsuario")]
-
         public async Task<Result> CrearUsuario([FromBody] UsuarioCrearDto usuarioCrear)
         {
             try

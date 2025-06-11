@@ -16,7 +16,7 @@ namespace Business.Service
         }
 
 
-        public async Task<Result> ActualizarTarea(TareasDto actualizar)
+        public async Task<Result> ActualizarTarea(TareasActualizarDto actualizar)
         {
             TareasModel model = Mapper.GetMapper(actualizar);
                 Result oRespuesta = new();
@@ -34,6 +34,7 @@ namespace Business.Service
                 return result;
             
         }
+
 
         public async Task<Result> ConsultarTareaId(int id)
         {
@@ -92,7 +93,7 @@ namespace Business.Service
             Result result = new Result
             {
                 Success = false,
-                Message = "Tarea eliminado con exito"
+                Message = "Tarea eliminada con exito"
             };
             result.Success = true;
             result.Data = rs;
